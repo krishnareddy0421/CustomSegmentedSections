@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (4.5.1)
+  - SwiftyJSON (3.1.4)
+  - TwicketSegmentedControl (0.1.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - SwiftyJSON
+  - TwicketSegmentedControl
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  TwicketSegmentedControl: 6d7a4cf243657e0ac3f00d06d873a25334c04042
+
+PODFILE CHECKSUM: 248f2c8910babd7f1d03da84864de4e584a5d277
+
+COCOAPODS: 1.4.0.beta.1

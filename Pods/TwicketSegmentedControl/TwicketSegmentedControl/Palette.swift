@@ -12,7 +12,7 @@ struct Palette {
     static let defaultTextColor = Palette.colorFromRGB(9, green: 26, blue: 51, alpha: 0.4)
     static let highlightTextColor = UIColor.white
     static let segmentedControlBackgroundColor = Palette.colorFromRGB(237, green: 242, blue: 247, alpha: 0.7)
-    static let sliderColor = Palette.colorFromRGB(0, green: 0, blue: 0)
+    static let sliderColor = Palette.colorFromRGB(31, green: 99, blue: 154)
 
     static func colorFromRGB(_ red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat = 1.0) -> UIColor {
         func amount(_ amount: CGFloat, with alpha: CGFloat) -> CGFloat {

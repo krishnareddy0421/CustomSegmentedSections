@@ -6,11 +6,11 @@
 //  Copyright © 2017 kvkr. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Article {
     public private(set) var id: String!
     public private(set) var title: String!
     public private(set) var description: String!
-    public private(set) var thumbnailUrl: String!
+    public private(set) var thumbnailImg: UIImage!
 }

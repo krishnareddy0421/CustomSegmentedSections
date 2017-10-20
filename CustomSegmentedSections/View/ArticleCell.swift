@@ -10,4 +10,12 @@ import UIKit
 
 class ArticleCell: UICollectionViewCell {
     
+    // MARK: - Outlets
+    @IBOutlet weak var thumbnailImgView: UIImageView!
+    @IBOutlet weak var articleTitleLbl: UILabel!
+    
+    func configureCell(_ articleDetails: Article) {
+        thumbnailImgView.image = articleDetails.thumbnailImg
+        articleTitleLbl.text = articleDetails.title
+    }
 }

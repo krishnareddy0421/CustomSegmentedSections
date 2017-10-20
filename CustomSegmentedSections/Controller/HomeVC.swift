@@ -9,8 +9,15 @@
 import UIKit
 import TwicketSegmentedControl
 
-class HomeVC: UIViewController, TwicketSegmentedControlDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIViewControllerTransitioningDelegate {
+class HomeVC: UIViewController, TwicketSegmentedControlDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
+    // MARK: Details View
+    @IBOutlet var detailsInfoView: UIView!
+    @IBOutlet weak var detailsThumbnailImgView: UIImageView!
+    @IBOutlet weak var articleTitleLbl: UILabel!
+    @IBOutlet weak var descriptionLbl: UILabel!
+    @IBOutlet weak var bgView: UIView!
+    
     // MARK: - Outlets
     @IBOutlet weak var customSegmentCntrl: TwicketSegmentedControl!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -96,44 +103,28 @@ class HomeVC: UIViewController, TwicketSegmentedControlDelegate, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        let article = DataService.instance.articles[indexPath.row]
+        articleTitleLbl.text = article.title
+        descriptionLbl.text = article.description
         
-        // Set frame of cell
-        let attributes = collectionView.layoutAttributesForItem(at: indexPath)
-        let attributeFrames = attributes?.frame
-        let frameToOpenFrom = collectionView.convert(attributeFrames!, from: collectionView.superview)
-        openingFrame = frameToOpenFrom
-        performSegue(withIdentifier: "toDetailsVC", sender: nil)
+        detailsThumbnailImgView.image = article.thumbnailImg
+        detailsInfoView.frame = CGRect(x: 0, y: view.frame.height * 0.1, width: view.frame.width, height: view.frame.height)
+        detailsInfoView.layer.cornerRadius = 10
         
-//        // Present view controller
-//        let expandedVC = ExpandedVC()
-//        expandedVC.transitioningDelegate = self
-//        expandedVC.modalPresentationStyle = .custom
-//        expandedVC.title = DataService.instance.articles[indexPath.row].title
-//        present(expandedVC, animated: true, completion: nil)
+        detailsInfoView.transform = CGAffineTransform(scaleX: 0.7, y: 1.3)
+        view.addSubview(detailsInfoView)
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: {
+            self.bgView.alpha = 0.55
+            self.detailsInfoView.transform = .identity
+        })
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toDetailsVC" {
-            let detailsVC = segue.destination as! ExpandedVC
-            detailsVC.transitioningDelegate = self
-            detailsVC.modalPresentationStyle = .custom
+    @IBAction func closeViewBtnPressed(_ sender: Any) {
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: {
+            self.bgView.alpha = 0
+        }) { (success) in
+            self.detailsInfoView.removeFromSuperview()
         }
     }
-    
-    
-    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        let presentationAnimator = ExpandAnimator.animator
-        presentationAnimator.openingFrame = openingFrame!
-        presentationAnimator.transitionMode = .Present
-        return presentationAnimator as? UIViewControllerAnimatedTransitioning
-    }
-    
-    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        let presentationAnimator = ExpandAnimator.animator
-        presentationAnimator.openingFrame = openingFrame!
-        presentationAnimator.transitionMode = .Dismiss
-        return presentationAnimator as? UIViewControllerAnimatedTransitioning
-    }
-    
 }
-

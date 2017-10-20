@@ -17,8 +17,6 @@
 		9E6379751F99164E00868CE5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6379741F99164E00868CE5 /* Constants.swift */; };
 		9EA566C11F99473200A3CFC7 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA566C01F99473200A3CFC7 /* ArticleCell.swift */; };
 		9EA566C41F995B4600A3CFC7 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA566C31F995B4600A3CFC7 /* DataService.swift */; };
-		9EA566C61F99852400A3CFC7 /* ExpandAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA566C51F99852400A3CFC7 /* ExpandAnimator.swift */; };
-		9EA566C81F99911800A3CFC7 /* ExpandedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA566C71F99911700A3CFC7 /* ExpandedVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +34,6 @@
 		9E6379741F99164E00868CE5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9EA566C01F99473200A3CFC7 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		9EA566C31F995B4600A3CFC7 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
-		9EA566C51F99852400A3CFC7 /* ExpandAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandAnimator.swift; sourceTree = "<group>"; };
-		9EA566C71F99911700A3CFC7 /* ExpandedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				9E6379601F99153900868CE5 /* HomeVC.swift */,
-				9EA566C71F99911700A3CFC7 /* ExpandedVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -116,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				9EA566C01F99473200A3CFC7 /* ArticleCell.swift */,
-				9EA566C51F99852400A3CFC7 /* ExpandAnimator.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -280,11 +274,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E6379611F99153900868CE5 /* HomeVC.swift in Sources */,
-				9EA566C61F99852400A3CFC7 /* ExpandAnimator.swift in Sources */,
 				9E63795F1F99153900868CE5 /* AppDelegate.swift in Sources */,
 				9E6379721F99161F00868CE5 /* Article.swift in Sources */,
 				9EA566C41F995B4600A3CFC7 /* DataService.swift in Sources */,
-				9EA566C81F99911800A3CFC7 /* ExpandedVC.swift in Sources */,
 				9EA566C11F99473200A3CFC7 /* ArticleCell.swift in Sources */,
 				9E6379751F99164E00868CE5 /* Constants.swift in Sources */,
 			);

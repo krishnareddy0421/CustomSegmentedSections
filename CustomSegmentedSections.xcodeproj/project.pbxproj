@@ -417,7 +417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZELVJRAH4Y;
+				DEVELOPMENT_TEAM = LR6KF3PU2X;
 				INFOPLIST_FILE = CustomSegmentedSections/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ownApplicationDevelopment.CustomSegmentedSections;
@@ -433,7 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZELVJRAH4Y;
+				DEVELOPMENT_TEAM = LR6KF3PU2X;
 				INFOPLIST_FILE = CustomSegmentedSections/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ownApplicationDevelopment.CustomSegmentedSections;
